@@ -1,0 +1,43 @@
+{
+  "name": "anf-webapp",
+  "private": true,
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.2.1",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.11.39",
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "jest": "^27.5.1",
+    "react": "^18.2.0",
+    "react-app-rewired": "^2.2.1",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "ts-jest": "^27.1.5",
+    "typescript": "~4.6.4",
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.73.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=16.14.0",
+    "npm": ">=8.7.0"
+  }
+}
