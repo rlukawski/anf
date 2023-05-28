@@ -28,7 +28,6 @@
   ],
   "exclude": [
     "node_modules",
-    "src/lessons/m1",
-    "src/lessons/m3/homework/contacts"
+    "src/lessons/m1"
   ]
 }
