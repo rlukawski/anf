@@ -7,7 +7,7 @@ interface ŁosośNorweski {
 
 function dajMiŁosoś(){
   var musiByćŁosoś: ŁosośNorweski | undefined
-  // if (!musiByćŁosoś){
+  // if (!musiByćŁosoś) {
   //   throw new Error('Wrong wrong wrong!')
   //   // IF branch implicitly continues with never
   // }

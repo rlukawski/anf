@@ -1,4 +1,4 @@
-// 1. TYPEOF 
+// 1. TYPEOF
 
 import { Currency, Employee } from "./types"
 

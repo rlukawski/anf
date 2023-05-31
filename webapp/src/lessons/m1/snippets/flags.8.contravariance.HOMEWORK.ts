@@ -16,7 +16,7 @@ type EssayQuestion = {
 }
 declare const essayQuestion: EssayQuestion
 
-type Question = 
+type Question =
   | ChoiceQuestion
   | EssayQuestion
 

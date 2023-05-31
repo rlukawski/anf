@@ -1,4 +1,4 @@
-export {} // 
+export {} //
 
 /*
 Zerknijmy na przykład: mamy 3 różne elementy: interfejs, klasę i typ TypeScriptowy. Nie dziedziczą po żadnej klasie, nie implementują żadnego interfejsu.
@@ -16,11 +16,11 @@ Dodatkowo - jeśli w ogóle nie zadeklarujemy żadnego interfejsu, typu ani klas
 interface Human {
   name: string
 }
- 
+
 class Person {
   constructor(public name: string) { }
 }
- 
+
 interface Dog {
   name: string
 }
@@ -33,7 +33,7 @@ declare let person: Person
 declare let dog: Dog
 
 // 3. assignable
- 
+
 human = person
 person = human
 dog = person
@@ -46,9 +46,9 @@ dog = human
 let ufo = {
   name: "Aquatoid",
 }
- 
+
 ufo = human
 human = ufo
- 
+
 // 5. dodanie pól - złamanie kompatybilności, ponieważ kontrakt nie jest spełniony
 // do ufo dodajemy age:10

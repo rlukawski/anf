@@ -8,7 +8,7 @@ if (expr){
   expr
 }
 
-// short curcuit operators
+// short circuit operators
 const exprOr = expr || bool // zatrzymuje się na boolu, odsiewa falsy values ze zbioru
 const exprAnd = expr && bool // jeśli expr falsy, zatrzymuje się, jeśli truthy - bierze boolean
 

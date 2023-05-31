@@ -124,7 +124,7 @@ function awanturaJeśliNieŁosoś(czyżbyŁosoś: unknown): asserts czyżbyŁoso
   if (jestŁososiemNorweskim(czyżbyŁosoś)){
     // jeśli pochodzi z Chile to jeszcze przejdzie
     // ale Brazylia i Wietnam to już nie
-    if (czyżbyŁosoś.krajPochodzenia !== 'Chile') { 
+    if (czyżbyŁosoś.krajPochodzenia !== 'Chile') {
       throw new Error('Żądam zwrotu pieniędzy')
     }
   } else {

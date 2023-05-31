@@ -57,4 +57,3 @@ declare let intersectionObject: DriverDeveloperIntersection
 type Employee = Developer | TaxiDriver
 type FlyingEmployee = Employee & { fly(): void }
 // (Developer & { fly(): void; }) | (TaxiDriver & { fly(): void; })
-

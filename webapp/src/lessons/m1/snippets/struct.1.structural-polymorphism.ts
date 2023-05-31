@@ -53,6 +53,3 @@ taxiDriver = human // ❌
 human.name // ✅
 taxiDriver.drive() // ✅
 human.drive() // ❌
-
-
-

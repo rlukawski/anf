@@ -134,4 +134,3 @@ obiektB.metoda1(true)
 // definiując generyki świadomie decydujmmy:
 // czy mają być stałe dla całej klasy
 // czy różne dla każdego wywołania
-
