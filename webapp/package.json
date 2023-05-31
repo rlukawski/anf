@@ -4,7 +4,10 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "react-app-rewired test"
+    "test": "react-app-rewired test",
+    "test:unit": "cross-env CI=true react-app-rewired test",
+    "check:circular-deps": "madge --warning --circular --extensions ts,tsx src",
+    "dump:deps": "madge --json --include-npm src/index.tsx > deps.json"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -14,15 +17,35 @@
     "@types/node": "^16.11.39",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
+    "@types/simplemde": "^1.11.8",
+    "axios": "^1.4.0",
+    "cross-env": "^7.0.3",
+    "fetch-mock": "^9.11.0",
+    "flush-promises": "^1.0.2",
+    "isomorphic-fetch": "^3.0.0",
     "jest": "^27.5.1",
+    "madge": "^5.0.2",
+    "msw": "~0.39.2",
     "react": "^18.2.0",
     "react-app-rewired": "^2.2.1",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
+    "simplemde": "^1.11.2",
     "ts-jest": "^27.1.5",
     "typescript": "~4.6.4",
     "web-vitals": "^2.1.4",
     "webpack": "^5.73.0"
+  },
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "m2/setup"
+    ],
+    "moduleNameMapper": {
+      "^axios$": "axios/dist/axios.js"
+    }
+  },
+  "madge": {
+    "tsConfig": "tsconfig.json"
   },
   "browserslist": {
     "production": [
