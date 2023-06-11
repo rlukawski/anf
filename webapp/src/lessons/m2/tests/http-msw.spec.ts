@@ -28,6 +28,7 @@ describe('AlbumDAO', () => {
   })
 
   test('should mock a failure', async () => {
-    await expect(saveAlbums([])).rejects.toThrow('Network request failed')
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+    await expect(saveAlbums([])).rejects.toThrow('Failed to fetch')
   })
 })

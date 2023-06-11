@@ -4,6 +4,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// see the difference in webpack-bundle-analyzer
+if (process.env.NODE_ENV !== 'production') {
+  // 1. eager bundle
+  const axe = require('@axe-core/react') as typeof import('@axe-core/react');
+  axe(React, ReactDOM, 1000, {});
+
+  // 2. lazy bundle
+  // import('@axe-core/react')
+  // .then(module => module.default)
+  // .then(axe => {
+  //   axe(React, ReactDOM, 1000, {});
+  // })
+}
+
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <App />
