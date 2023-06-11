@@ -14,7 +14,7 @@ interface DescriptionProps {
   children: (C: ComponentType<React.PropsWithChildren>) => React.ReactNode
 }
 
-export const Description: React.FC<DescriptionProps> = (props) => {
+export const Description = (props: DescriptionProps) => {
   const { header, children } = props
 
 

@@ -41,7 +41,7 @@ const SalarySummariesCell = styled.div<{
 interface EmployeesViewProps {
 }
 
-export const EmployeesView: React.FC<EmployeesViewProps> = () => {
+export const EmployeesView = (props: EmployeesViewProps) => {
   const [employees, setEmployees] = useState<Employee[]>([]);
 
   /**

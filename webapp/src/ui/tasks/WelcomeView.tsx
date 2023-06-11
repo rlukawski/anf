@@ -2,7 +2,7 @@
 import { Typography } from "ui/atoms";
 import { Center, EmojiWrapper } from "./styled";
 
-export const WelcomeView: React.FC = () => {
+export const WelcomeView = () => {
   return (
     <Center>
       <Typography variant="h1">Welcome!</Typography>

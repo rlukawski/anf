@@ -8,7 +8,7 @@ interface RichtextTaskViewProps {
   onAnswerChange?: (taskId: RichtextTask['id'], answer: string) => void
 }
 
-export const RichtextTaskView: React.FC<RichtextTaskViewProps> = (props) => {
+export const RichtextTaskView = (props: RichtextTaskViewProps) => {
   const { task, onAnswerChange } = props
   const [answer, setAnswer] = useState("")
   const updateAnswer = useCallback((newAnswer: string) => {

@@ -116,9 +116,9 @@ interface EmployeeListProps {
   onFireClick: (e: Employee) => void
 }
 
-export const EmployeeList: React.FC<EmployeeListProps> = ({
+export const EmployeeList = ({
   employees, onGiveRiseClick, onFireClick
-}) => {
+}: EmployeeListProps) => {
 
   return <>
     <Typography variant="h2">Pracownicy</Typography>

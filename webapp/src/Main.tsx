@@ -9,7 +9,7 @@ import { EmployeePlans } from 'ui/employee-plans/EmployeePlans';
 import { Welcome } from 'ui/app/Welcome';
 
 
-export const Main: React.FC = () => {
+export const Main = () => {
   return (
     <div className="App">
       <AppHeader/>

@@ -62,7 +62,7 @@ const HeaderNav = styled.nav`
   }
 `;
 
-export const AppHeader: React.FC = () => {
+export const AppHeader = () => {
   return <Header>
     <HeaderContainer>
       <HeaderLogo to="/" data-testid="link-app-logo">ACME</HeaderLogo>

@@ -8,7 +8,7 @@ interface LoaderProps {
 }
 
 // inspired by https://loading.io/spinner/eclipse/-eclipse-ring-circle-rotate
-export const Loader: React.FC<LoaderProps> = ({ fillColor = colors.mainBlue }) => {
+export const Loader = ({ fillColor = colors.mainBlue }: LoaderProps) => {
   return <svg data-testid="img-loader" xmlns="http://www.w3.org/2000/svg" xmlns-xlink="http://www.w3.org/1999/xlink"
     style={{ margin: "auto", display: "block" }}
     width="80px" height="80px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">

@@ -8,7 +8,7 @@ interface ChoiceTaskViewProps {
   onAnswerChange?: (taskId: ChoiceTask['id'], choices: string[]) => void
 }
 
-export const ChoiceTaskView: React.FC<ChoiceTaskViewProps> = (props) => {
+export const ChoiceTaskView = (props: ChoiceTaskViewProps) => {
   const { task, onAnswerChange } = props
   const [answer, setAnswer] = useState<string[]>([])
   const updateAnswer = useCallback((newAnswer: string[]) => {

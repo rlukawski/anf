@@ -13,7 +13,7 @@ import { RichtextTaskView } from './RichtextTaskView';
 
 // Poniższy kod jest do zaorania - tu należy zaimplementować pracę domową "Exams" z Modułu 4 :)
 
-export const ExamView: React.FC<{ exam: Exam }> = ({ exam }) => {
+export const ExamView = ({ exam }: { exam: Exam }) => {
   return (
     <Panel>
       <Typography variant="body">Praca domowa do zaimplementowania tutaj.</Typography>

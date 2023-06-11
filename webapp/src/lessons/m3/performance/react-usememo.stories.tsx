@@ -10,8 +10,8 @@ interface MemoizedComponentProps {
   data: { value: number }
   onClick(): void
 }
-const MemoizedComponent: React.FC<MemoizedComponentProps> = memo(
-  (props) => {
+const MemoizedComponent = memo(
+  (props: MemoizedComponentProps) => {
     renderAction(`render MemoizedComponent`)
     return <div>
       This is my data value: <code>{props.data.value}</code>

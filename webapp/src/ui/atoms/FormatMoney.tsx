@@ -12,7 +12,7 @@ interface FormatMoneyProps {
   amount: Money
 }
 
-export const FormatMoney: React.FC<FormatMoneyProps> = (props) => {
+export const FormatMoney = (props: FormatMoneyProps) => {
   const { amount } = props
   return <>
     {formatter.format(amount)}

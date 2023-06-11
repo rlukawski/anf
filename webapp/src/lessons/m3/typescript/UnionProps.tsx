@@ -3,7 +3,7 @@ import { exhaustiveCheck } from '../../../lib/lang'
 
 /**
  * 🔥 UNION PROPS
- * 
+ *
  * Czyli props, którego wartością jest UNIA (np. obiektów)
  * Zastosowanie mają reguły kompatybilności unii - czyli
  * wewnątrz komponent musimy sprawdzić, z którym elementem unii mamy faktycznie do czynienia
@@ -17,7 +17,7 @@ export type Manager = Person & {
   department: string
 }
 // declare const ManagerView: React.FC<{ manager: Manager }>
-export const ManagerView: React.FC<{ manager: Manager }> = (props) => {
+export const ManagerView = (props: { manager: Manager }) => {
   const { manager: m } = props
   return <>{m.firstName} {m.lastName}, manager of {m.department} department</>
 }
@@ -27,7 +27,7 @@ export type Developer = Person & {
   languages: string[]
 }
 // declare const DeveloperView: React.FC<{ developer: Developer }>
-export const DeveloperView: React.FC<{ developer: Developer }> = (props) => {
+export const DeveloperView = (props: { developer: Developer }) => {
   const { developer: d } = props
   return <>{d.firstName} {d.lastName}, known languages: {d.languages.join(', ')}</>
 }
@@ -42,7 +42,7 @@ export type CompanyEmployee =
 interface EmployeeListingProps {
   employees: CompanyEmployee[]
 }
-export const CompanyEmployeeList: React.FC<EmployeeListingProps> = (props) => {
+export const CompanyEmployeeList = (props: EmployeeListingProps) => {
   const { employees } = props
   return <ul>{
     employees.map(e => {
@@ -62,7 +62,7 @@ export const CompanyEmployeeList: React.FC<EmployeeListingProps> = (props) => {
 
 
 // wyekstraktowane z listingu
-export const CompanyEmployeeView: React.FC<{ employee: CompanyEmployee }> = (props) => {
+export const CompanyEmployeeView = (props: { employee: CompanyEmployee }) => {
   const { employee: e } = props
   if (e.type === 'DEVELOPER') {
     return <DeveloperView developer={e} />

@@ -19,7 +19,7 @@ export default {
 } as Meta;
 
 
-const PersonsList: React.FC<{ persons: Person[] }> = (props) => {
+const PersonsList = (props: { persons: Person[] }) => {
   const { persons } = props
   return <ul>
     { persons.map( p => <li key={p.id}>{p.firstName} {p.lastName}</li> ) }

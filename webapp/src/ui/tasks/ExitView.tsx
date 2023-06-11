@@ -2,7 +2,7 @@
 import { Typography } from "ui/atoms";
 import { Center, EmojiWrapper } from './styled';
 
-export const ExitView: React.FC = () => {
+export const ExitView = () => {
   return (
     <Center>
       <Typography variant="h1">Exam completed!</Typography>

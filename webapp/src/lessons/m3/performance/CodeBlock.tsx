@@ -14,9 +14,9 @@ interface CodeBlockProps {
   sourceCode: string
 }
 
-export const CodeBlock: React.FC<CodeBlockProps> =
+export const CodeBlock =
   // memo(
-    (props) => {
+    (props: CodeBlockProps) => {
       const { sourceCode } = props
 
       const rootEl = useRef<HTMLDivElement>(null);

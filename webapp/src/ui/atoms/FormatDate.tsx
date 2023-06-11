@@ -11,7 +11,7 @@ interface FormatDateProps {
   date: string
 }
 
-export const FormatDate: React.FC<FormatDateProps> = (props) => {
+export const FormatDate = (props: FormatDateProps) => {
   const { date } = props
   return <>
     {formatter.format(new Date(date))}

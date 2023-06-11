@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const CheckmarkWrapper = styled.div``;
 
-export const Checkmark: React.FC<{ className?: string }> = (props) => {
+export const Checkmark = (props: { className?: string }) => {
   const { className } = props;
   return (
     <CheckmarkWrapper className={className}>

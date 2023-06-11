@@ -99,7 +99,7 @@ const CheckboxError = styled(ErrorBox)`
   line-height: 1.33;
 `;
 
-export const CheckboxField: React.FC<CheckboxFieldProps> = (props) => {
+export const CheckboxField = (props: CheckboxFieldProps) => {
   const { id, label, defaultChecked = false, onChange, disabled, error } = props;
 
   const [checked, setChecked] = useState(defaultChecked)

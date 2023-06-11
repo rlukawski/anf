@@ -15,7 +15,7 @@ interface DropdownFieldProps {
   error?: string
 }
 
-export const DropdownField: React.FC<DropdownFieldProps> = (props) => {
+export const DropdownField = (props: DropdownFieldProps) => {
   const { id, label, layoutDirection = "horizontal", items, defaultValue, onChange, includeEmpty, disabled, error } = props
 
   return <FormField

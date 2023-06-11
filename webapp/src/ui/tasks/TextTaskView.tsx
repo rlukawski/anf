@@ -8,7 +8,7 @@ interface TextTaskViewProps {
   onAnswerChange?: (taskId: TextTask['id'], answer: string) => void
 }
 
-export const TextTaskView: React.FC<TextTaskViewProps> = (props) => {
+export const TextTaskView = (props: TextTaskViewProps) => {
   const { task, onAnswerChange } = props;
   const [answer, setAnswer] = useState("");
   const updateAnswer = useCallback((newAnswer: string) => {

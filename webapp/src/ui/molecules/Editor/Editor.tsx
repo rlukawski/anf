@@ -8,7 +8,7 @@ interface EditorProps {
   onChange: (content: string) => void
 }
 
-export const Editor: React.FC<EditorProps> = (props) => {
+export const Editor = (props: EditorProps) => {
   const { onChange } = props;
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 

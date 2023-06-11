@@ -14,7 +14,7 @@ const LogoWrapper = styled.div`
   }
 `;
 
-export const Welcome: React.FC = () => {
+export const Welcome = () => {
   return <>
     <Container>
       <LogoWrapper>

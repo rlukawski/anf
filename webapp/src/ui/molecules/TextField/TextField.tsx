@@ -16,7 +16,7 @@ export interface TextFieldProps {
   noMargin?: boolean;
 }
 
-export const TextField: React.FC<TextFieldProps> = (props) => {
+export const TextField = (props: TextFieldProps) => {
   const { id, label, layoutDirection = "horizontal", placeholder, defaultValue, onChange, type = "text", disabled, error, noMargin } = props
 
   const [value, setValue] = useState(defaultValue || "")
