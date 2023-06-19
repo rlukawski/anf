@@ -1,5 +1,6 @@
 import type { StorybookConfig } from "@storybook/react-webpack5";
 import NodePolyfillPlugin from "node-polyfill-webpack-plugin";
+import path from "path";
 
 const config: StorybookConfig = {
   stories: [
@@ -16,6 +17,9 @@ const config: StorybookConfig = {
     name: "@storybook/react-webpack5",
     options: {},
   },
+  core: {
+    disableTelemetry: true,
+  },
   docs: {
     autodocs: "tag",
   },
@@ -31,6 +35,12 @@ const config: StorybookConfig = {
 
     // BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
     config.plugins!.push(new NodePolyfillPlugin());
+
+    // Overrides for lessons/m3/homework/contacts
+    Object.assign(config.resolve!.alias!, {
+      "react": path.resolve(__dirname, "../node_modules/react"),
+      "react-dom": path.resolve(__dirname, "../node_modules/react-dom"),
+    });
 
     return config;
   },

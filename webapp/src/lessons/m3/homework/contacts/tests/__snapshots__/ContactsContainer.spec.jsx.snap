@@ -4,19 +4,19 @@ exports[`ContactsContainer Component should match snapshot 1`] = `
 <ContactsContainer
   service={
     ContactsService {
-      "contacts": [
-        {
+      "contacts": Array [
+        Object {
           "details": "candidate test",
           "id": "4567",
           "name": "candidate test",
         },
       ],
       "getContacts": [MockFunction] {
-        "calls": [
-          [],
+        "calls": Array [
+          Array [],
         ],
-        "results": [
-          {
+        "results": Array [
+          Object {
             "type": "return",
             "value": Promise {},
           },
@@ -47,7 +47,7 @@ exports[`ContactsContainer Component should match snapshot 1`] = `
         className="col-md-4"
       >
         <ContactList
-          contacts={[]}
+          contacts={Array []}
           onSelect={[Function]}
           selected={null}
         >
