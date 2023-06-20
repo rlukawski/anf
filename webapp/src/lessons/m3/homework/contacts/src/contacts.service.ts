@@ -1,7 +1,9 @@
 import { v4 as uuid } from 'uuid';
 
-interface Contact {
-  id: string;
+export interface Contact {
+  id?: string;
+  name?: string;
+  details?: string;
 }
 
 export class ContactsService {
