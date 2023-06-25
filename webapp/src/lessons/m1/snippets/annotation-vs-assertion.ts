@@ -46,7 +46,7 @@ const producePerson = (): Person => {
 
 // 👍 anotacja sprawdza kompatybilność
 const p1: Person = producePerson() // miał być person i jest person
-const p2: Developer = producePerson() // 👍 słusznie, bo nie wiadomo czy będzie Person
+const p2: Developer = producePerson() // 👍 słusznie, bo nie wiadomo czy będzie Developer
 
 // 🔥 asercja pozwala przypisać podtyp lub nadtyp
 const p3 = producePerson() as Person // (niepotrzebnie) "rzutujemy" Person na Person
