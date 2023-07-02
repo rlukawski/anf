@@ -1,11 +1,11 @@
 import type { StorybookConfig } from "@storybook/react-webpack5";
+import globby from "globby";
 import NodePolyfillPlugin from "node-polyfill-webpack-plugin";
 import path from "path";
 
 const config: StorybookConfig = {
-  stories: [
-    "../src/**/*.stories.@(js|jsx|ts|tsx)",
-  ],
+  // https://github.com/storybookjs/storybook/issues/11181
+  stories: globby.sync(["../src/**/*.stories.@(js|jsx|ts|tsx)", "!../src/**/node_modules/**/*"], { cwd: "./.storybook" }),
   addons: [
     "@storybook/addon-a11y",
     "@storybook/addon-essentials",
