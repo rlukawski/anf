@@ -9,7 +9,7 @@ export function branches(condA, condB){
   } else {
     doNotA()
   }
-  
+
   if (condB){
     doB()
   } else {

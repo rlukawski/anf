@@ -25,7 +25,7 @@ test("mocked function should return values as specified in sequence (resolved)",
   (fetchAlbums as jest.Mock)
     .mockResolvedValue([])
     .mockResolvedValueOnce([{ id: 1 }])
-    
+
   const result1 = await fetchAlbums()
   expect(result1).toEqual([{ id: 1 }])
   const result2 = await fetchAlbums()

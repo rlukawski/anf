@@ -61,6 +61,7 @@
     "jest-styled-components": "^7.1.1",
     "madge": "^5.0.2",
     "msw": "^1.2.2",
+    "msw-storybook-addon": "^1.8.0",
     "node-polyfill-webpack-plugin": "^2.0.1",
     "polished": "^4.2.2",
     "prop-types": "^15.8.1",

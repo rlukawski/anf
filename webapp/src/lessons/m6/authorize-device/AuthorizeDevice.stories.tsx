@@ -7,6 +7,7 @@ import { AuthorizeDeviceProcessPrimitive } from './hooks/AuthorizeDeviceProcessP
 import { AuthorizeDeviceProcessUnion } from './hooks/AuthorizeDeviceProcessUnion'
 import { AuthorizeDeviceProcessReduxWithStore } from './redux/AuthorizeDeviceProcessRedux'
 import { AuthorizeDeviceProcessXState } from './xstate/AuthorizeDeviceProcessXState'
+import { tokenMockHandlers } from 'api/mock/token.mock';
 
 import { Panel } from 'ui/layout';
 import { Button } from 'ui/atoms';
@@ -16,6 +17,7 @@ import { Modal } from 'ui/molecules';
 export default {
   title: 'Lessons/M6 State Machines/Authorize Device',
   parameters: {
+    msw: tokenMockHandlers
   },
 } as Meta;
 

@@ -25,3 +25,14 @@ const preview: Preview = {
 };
 
 export default preview;
+
+// M7 INTEGRATION TESTING
+// msw-storybook-addon
+
+import { initialize, mswDecorator } from 'msw-storybook-addon';
+
+initialize({ onUnhandledRequest: 'bypass' });
+
+export const decorators = [
+  mswDecorator,
+];
