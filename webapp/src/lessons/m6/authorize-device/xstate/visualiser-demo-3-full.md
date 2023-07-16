@@ -38,7 +38,7 @@ const getTokenInstruction = () =>
   fetch(`${BASE_URL}/token`, { method: 'POST' })
   .then(response => response.json())
 
-const sendTokenCode = (params) => 
+const sendTokenCode = (params) =>
   fetch(`${BASE_URL}/token/${params.tokenId}`, { method: 'POST', body: JSON.stringify(params) })
   .then(response => response.json())
 */

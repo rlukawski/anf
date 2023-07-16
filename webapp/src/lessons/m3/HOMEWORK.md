@@ -26,7 +26,7 @@
 - uruchomienie SB: `npm run storybook` z folderu `webapp`; w SB sekcja: M3 React / Homework / Employee Plans
 - zadanie:
   - uruchom devtoolsy, przeklikaj funkcjonalność - a także przeczytaj kodzik
-  - znajdź miejsca, w których obliczenia są wykonywane nadmiarowo i zastosuj optymalizacje 
+  - znajdź miejsca, w których obliczenia są wykonywane nadmiarowo i zastosuj optymalizacje
 
 ## Własny Projekt - Storybook
 

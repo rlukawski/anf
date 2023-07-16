@@ -23,7 +23,7 @@ export const getLimits = async () => {
   return response.data;
 }
 
-type SendLimitsUpdatePayload = 
+type SendLimitsUpdatePayload =
   | Pick<LimitsSettings, "dailyLimit">
   | Pick<LimitsSettings, "monthlyLimit">
   | Pick<LimitsSettings, "verificationMethod">

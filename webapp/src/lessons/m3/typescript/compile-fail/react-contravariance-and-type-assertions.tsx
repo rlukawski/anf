@@ -5,7 +5,7 @@ import { CompanyEmployee, Developer, Manager, ManagerView, DeveloperView, Compan
 /**
  * Plik ilustruje przykładowe błędy związane z kontrawariancją
  * a na końcu pliku ilustrujemy, że z type assertions, trzeba ostrożnie
- * 
+ *
  * Posłużymy się ItemsList (generycznym komponentem z render props)
  */
 

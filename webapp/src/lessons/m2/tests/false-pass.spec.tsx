@@ -44,7 +44,7 @@ const ShipButton: React.FC<{ shipment: Shipment }> = (props) => {
     data-testid="proceed-btn"
     disabled={expired}
   >proceed with shipment{ shipment.shipmentId }</button>
-} 
+}
 
 // test był pisany dawno temu 🙃
 test.skip('should display active button (FALSE FAIL)', () => {

@@ -55,14 +55,14 @@ router.post('/token/:token', (req, res) => {
 
   const { tokenId, tokenCode } = req.body;
 
-  // validate 
+  // validate
   var valid = validateToken(req.body);
   if (!valid) {
     logError(() => JSON.stringify(validateToken.errors))
     return res.status(400).send(validateToken.errors)
   }
 
-  if (pendingLimitsUpdate && pendingLimitsUpdate.token.tokenId == tokenId){ // change limits token 
+  if (pendingLimitsUpdate && pendingLimitsUpdate.token.tokenId == tokenId){ // change limits token
     if (verifyToken({ tokenId, tokenCode })) {
       logDebug(() => `Token Authenticated for limits change ${JSON.stringify(pendingLimitsUpdate.change)}`);
       Object.assign(inMemoryLimitsState, pendingLimitsUpdate.change)
@@ -90,7 +90,7 @@ router.get('/limits', (req, res) => {
 
 router.post('/limits', (req, res) => {
 
-  // validate 
+  // validate
   var valid = validateLimits(req.body);
   if (!valid) {
     logError(() => JSON.stringify(validateLimits.errors))

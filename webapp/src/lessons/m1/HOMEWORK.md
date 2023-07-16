@@ -10,10 +10,10 @@
 
 - folder: `src/lessons/m1/homework-tests`
 - uruchomienie: `npm t` z folderu `webapp`
-- inicjalnie testy są zaskipowane - należy je "odskipować". Brakuje im implementacji, więc wszystkie inicjalnie failują. 
+- inicjalnie testy są zaskipowane - należy je "odskipować". Brakuje im implementacji, więc wszystkie inicjalnie failują.
 - zadanie: Należy napisać implementację, zgodnie z poleceniami w każdym pliku - a przy okazji poćwiczyć typowanie w TypeScripcie.
 
-## Mmodelowanie Domeny - System Ankiet (Ćwiczenie Designowe)
+## Modelowanie Domeny - System Ankiet (Ćwiczenie Designowe)
 
 Zadanie:
 

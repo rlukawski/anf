@@ -23,7 +23,7 @@ interface AuthorizeDeviceProcessPrimitiveProps {
  * i osobno całą resztę (tuzin useState niżej w komponencie) to wszystko jest porozklejane.
  * "DA SIĘ" to zakodować poprawnie w tym podejściu, ale kod będzie bardziej chaotyczny, będzie mnóstwo miejsc, gdzie można się pomylić
  * i współczujemy osobom, które kod napisany w takim stylu będą utrzymywały.
- * 
+ *
  * 🔥 WAŻNE: poniższa implementacja Primitive to ANTYPATTERN 🔥
  */
 type AuthorizeDeviceState =

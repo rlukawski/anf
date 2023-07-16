@@ -5,7 +5,7 @@ const validate = validateFunctions.logRequest;
 
 module.exports = (req, res, next) => {
   if (req.path.includes('/logs') && req.method === 'POST'){
-    // validate 
+    // validate
     var valid = validate(req.body);
     if (!valid) {
       logError(() => JSON.stringify(validate.errors))

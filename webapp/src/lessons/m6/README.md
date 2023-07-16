@@ -37,7 +37,7 @@ W tym module uczymy się o maszynach stanowych, które umożliwiają obsługę z
 - `onLogout(): void` - jeśli użytkownik kliknie *"wyloguj"*, uruchamiany jest ten callback.
 
 Uwaga: zwrómy uwagę, że mamy osobno *"anuluj"* oraz *"wyloguj"*:
-- *"anuluj"* - będąc w stanie `ADD_DEVICE_TOKEN` - przenosi użytkownika z powrotem do menu wyboru (stan początkowy) 
+- *"anuluj"* - będąc w stanie `ADD_DEVICE_TOKEN` - przenosi użytkownika z powrotem do menu wyboru (stan początkowy)
 - *"wyloguj"* - będąc w stanie `ALLOW_ONCE_TOKEN` - proces się kończy od razu - i jest wołany callback `onLogout`.
 
 #### stany

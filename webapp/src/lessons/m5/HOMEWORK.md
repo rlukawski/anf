@@ -17,7 +17,7 @@ wymagania:
 
 - folder: `src/lessons/m5/employee-plans`
 - storybook: sekcja *Lessons / Redux / Employee Plans*
-- zadania: 
+- zadania:
   - **dodajemy testy automatyczne**. Pokrywamy istniejącą funkcjonalność testami regresyjnymi.
   - **refactor**: przerabiamy tradycyjnego reduxa na implementację opartą o [redux toolkit](https://redux-toolkit.js.org)
   - **nowa funkcjonalność**: koszty pracownicze (miesięczne, kwartalne, roczne) mają uwzględniać zmiany wynikające z oglądanego planu kadrowego (box "Koszty pensji" i tam "Miesięczny/Kwartalny/Roczny koszt pensji" - wyświetlają kwotę, ale zamiast etykiety "bez zmian" obok, powinna być wyświetlana zmiana zgodnie z aktualnym planem kadrowym).

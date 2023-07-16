@@ -29,9 +29,9 @@
 
 - `failUrls` - (*comma-separated string*, list of URL patterns) - if `f` option is on, the requests that match any of the URL pattern in this list might potentially fail. Useful when you want to choose certain resources to be unstable temporarily. Example: `-fu employees,offices` - `employees*` and `offices*` are unstable, rest is stable
 
-- `coll` - (*boolean*) - turn on websocket-based **Collaborative Service** - default: false
+- `coll` - (*boolean*) - turn on Socket.IO-based **Collaborative Service** - default: false
 
-- `curr` - (*boolean*) - turn on websocket-based **Currency Service** - default: false
+- `curr` - (*boolean*) - turn on Socket.IO-based **Currency Service** - default: false. To use pure WebSocket implementation uncomment respective line in `server.js` file
 
 - `auth` - (*boolean*) - determines that JWT authentication is NOT required, default: false (not required)
 

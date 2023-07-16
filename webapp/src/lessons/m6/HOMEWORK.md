@@ -51,7 +51,7 @@ Należy zaimplementować proces zmiany limitów na koncie bankowym. Interfejs po
   - (jeśli user klika "anuluj" - wraca do podstawowego widoku)
   - user wpisuje kwotę i klika "zmień"
   - formularz z tokenem
-  - (jeśli user klika "prześlij nowy kod" - reset token), 
+  - (jeśli user klika "prześlij nowy kod" - reset token),
   - (jeśli user klika "anuluj" - wraca do podstawowego widoku)
   - user klika "potwierdź" - walidacja tokenu
 - zmiana "miesięcznego limitu wydawania hajsu":
@@ -62,9 +62,9 @@ Należy zaimplementować proces zmiany limitów na koncie bankowym. Interfejs po
   - (jeśli user klika "anuluj" - wraca do podstawowego widoku)
   - user wybiera "metodę potwierdzania" z dropdowna i klika "zmień"
   - formularz z tokenem
-  - (jeśli user klika "prześlij nowy kod" - reset token), 
+  - (jeśli user klika "prześlij nowy kod" - reset token),
   - (jeśli user klika "anuluj" - wraca do podstawowego widoku)
-  - user klika "potwierdź" - walidacja tokenu 
+  - user klika "potwierdź" - walidacja tokenu
 
 Gałęzie na zmianę limitu dziennego, miesięcznego i zmianę metody potwierdzania płatności są bardzo podobne. Różnią się pojedynczą informacją, która jest zmieniana podczas procesu.
 

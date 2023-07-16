@@ -27,7 +27,7 @@ $(function(){
     loadMessage: "Fetching latest logs...",
 
     fields: [
-      { 
+      {
         name: "date",
         type: "text",
         width: 50,
@@ -40,7 +40,7 @@ $(function(){
         items: logs,
         valueField: "level",
         textField: "label",
-        itemTemplate(value){ 
+        itemTemplate(value){
           const el = $(`<span style="color: ${logColor[value]}">${value}</span>`)
           // debugger
           return el
