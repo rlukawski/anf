@@ -1,7 +1,13 @@
-import { access } from 'fs';
-import { employees, shoppingList, shoppingDict, ShoppingItemWithId, Employee } from './mocks';
+import {
+  employees,
+  shoppingList,
+  shoppingDict,
+  ShoppingItemWithId,
+  Employee,
+  ShoppingItemsDictionary,
+} from "./mocks";
 
-describe('Collection restructuring', () => {
+describe("Collection restructuring", () => {
   // in these exercises you'll be given two data structures:
   // - shopping items list (small one)
   // - employee list (big one)
@@ -10,15 +16,18 @@ describe('Collection restructuring', () => {
   // - turn a list into a dictionary
   // - turn a dictionary into a list
 
-  it('array2dict can turn an array into a dictionary (with `id` key)', () => {
+  it("array2dict can turn an array into a dictionary (with `id` key)", () => {
     // write the `array2dict` function that turns a list into a dictionary
     // all elements of the list have `id` property set
 
     // define `array2dict` here
 
     const array2dict = <T extends Employee | ShoppingItemWithId>(e: T[]) => {
-      return e.reduce((acc, curr) => ({...acc, [curr['id']]: curr}), {} as Record<T['id'],T>)
-    }
+      return e.reduce(
+        (acc, curr) => ({ ...acc, [curr["id"]]: curr }),
+        {} as Record<T["id"], T>
+      );
+    };
 
     let employeeDictionary = array2dict(employees);
 
@@ -30,19 +39,25 @@ describe('Collection restructuring', () => {
 
     expect(shoppingList.length).toEqual(10);
     expect(Object.keys(shoppingDictionary).length).toEqual(10);
-    expect(shoppingDictionary[611830716982].name).toEqual('Beer');
-  })
+    expect(shoppingDictionary[611830716982].name).toEqual("Beer");
+  });
 
-  xit('dict2array can turn a dictionary (with `id` key) into an array', () => {
+  it("dict2array can turn a dictionary (with `id` key) into an array", () => {
     // write the `dict2array` function that turns a dictionary into a list
     // all elements within the dictionary are available under `id` keys
 
     // define `dict2array` here
 
+    const dict2array = (d: ShoppingItemsDictionary) => {
+      return Object.entries(d).map((item) => ({ ...item[1], id: parseInt(item[0]) }));
+    };
+
     let shoppingData = dict2array(shoppingDict);
 
     expect(Object.keys(shoppingDict).length).toEqual(10);
     expect(shoppingData.length).toEqual(10);
-    expect(shoppingData.find(e => e.id == 611830716982)!.name).toEqual('Beer');
-  })
-})
+    expect(shoppingData.find((e) => e.id == 611830716982)!.name).toEqual(
+      "Beer"
+    );
+  });
+});
