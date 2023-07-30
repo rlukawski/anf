@@ -19,10 +19,50 @@ EventEmitter constructor must be available in the global scope
 // for a real world implementation of an EventEmitter, compare with: https://github.com/mroderick/PubSubJS
 **********************************************************/
 
-// implement EventEmitter here
-export let EventEmitter = undefined; // let, var, const, function, class - your choice
+import { off } from "process";
 
-describe.skip('Event Emitter', function(){
+// implement EventEmitter here
+// export let EventEmitter = undefined; // let, var, const, function, class - your choice
+
+type EventEmitterMessage = {
+  operation: string
+} | string;
+
+type EventEmitterListener = Function
+
+class EventEmitter {
+
+  listeners: Record<string,EventEmitterListener[]> = {};
+
+  trigger(name: string, message: EventEmitterMessage) {
+    const listeners = this.listeners[name];
+    if( !listeners) {
+      return;
+    }
+    this.listeners[name].forEach(listener => listener(message))
+  }
+
+  on(name: string, listener: EventEmitterListener) {
+    if( !this.listeners[name]) {
+      this.listeners[name] = [];
+    }
+    this.listeners[name].push(listener);
+  }
+
+  off(name: string, listener: EventEmitterListener) {
+    if( !this.listeners[name]) {
+      return;
+    }
+    const idx = this.listeners[name].findIndex(item => item === listener);
+    if( idx < 0 ) {
+      return;
+    }
+    this.listeners[name].splice(idx,1)
+  }
+
+}
+
+describe('Event Emitter', function(){
 
   // for each test, there's a new EventEmitter instance created separately
 
@@ -70,6 +110,7 @@ describe.skip('Event Emitter', function(){
     expect(consumerC).toHaveBeenCalledWith(message);
   });
 
+  
   it('emits messages on a certain channel', function(){
     ee.on('operations', consumerA);
 
