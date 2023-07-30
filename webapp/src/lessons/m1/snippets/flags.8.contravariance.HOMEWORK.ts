@@ -21,7 +21,7 @@ type Question =
   | EssayQuestion
 
 
-function processQuestion(sendAnswer: (q: Question) => void, q: Question){
+function processQuestion<T extends Question>(sendAnswer: (q: T) => void, q: T){
   sendAnswer(q)
 }
 
