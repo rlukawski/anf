@@ -1,6 +1,6 @@
 import { employees, shoppingList, shoppingDict, ShoppingItemWithId } from './mocks';
 
-describe.skip('Collection restructuring', () => {
+describe('Collection restructuring', () => {
   // in these exercises you'll be given two data structures:
   // - shopping items list (small one)
   // - employee list (big one)
@@ -28,7 +28,7 @@ describe.skip('Collection restructuring', () => {
     expect(shoppingDictionary[611830716982].name).toEqual('Beer');
   })
 
-  it('dict2array can turn a dictionary (with `id` key) into an array', () => {
+  xit('dict2array can turn a dictionary (with `id` key) into an array', () => {
     // write the `dict2array` function that turns a dictionary into a list
     // all elements within the dictionary are available under `id` keys
 
