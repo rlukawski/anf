@@ -2,16 +2,16 @@
 // poniżej są warianty, które powinniśmy wspierać:
 
 type Info = {
-  label: number
-  value: number
-  format: (value: number) => number
+  type: 'number-number'
+  value: number;
+  format: (value: number) => number 
 } | {
-  label: string
-  value: number
+  type: 'number-string'
+  value: number;
   format: (value: number) => string
 } | {
-  label: string
-  value: string
+  type: 'string-string'
+  value: string;
   format: (value: string) => string
 }
 
@@ -23,7 +23,16 @@ type Info = {
 // i problem w tym, że unia tych typów funkcyjnych oblicza się do:
 // - OUTPUT: unia string|nummber (kowariancja) - standardowo, intuicyjnie
 // - INPUT: never (kontrawariancja) - bo value string & number -> never
-const calculate = ({ value, format }: Info) => format(value)
+const calculate = ({ value, format, type }: Info) => {
+  switch(type) {
+    case 'number-number':
+      return format(value);
+    case 'string-string':
+      return format(value);
+    case 'number-string':
+      return format(value);
+  }
+}
 // unia na pozycji COvariant = unia
 // unia na pozycji CONTRAvariant = przecięcie (odwrócenie)
 
@@ -35,11 +44,11 @@ type Fn_string_to_string = (value: string) => string
 
 // pierwszy + drugi (INPUT ten sam, number, OUTPUT - kowariancja, string|number)
 declare const f1: Fn_number_to_number | Fn_number_to_string
-f1() // f1: (value: number) => string | number
+f1(1) // f1: (value: number) => string | number
 
 // drugi + trzeci (OUTPUT ten sam, string, INPUT - kontrawariancja - never)
 declare const f2: Fn_number_to_string | Fn_string_to_string
-f2() // f2: (value: never) => string
+f2(1) // f2: (value: never) => string
 
 
 
