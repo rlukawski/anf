@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import { AppProviders } from './AppProviders';
+import App from './App';
 
 // see the difference in webpack-bundle-analyzer
 if (process.env.NODE_ENV !== 'production') {
@@ -20,7 +22,9 @@ if (process.env.NODE_ENV !== 'production') {
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <AppProviders>
+      <App />
+    </AppProviders>
   </React.StrictMode>
 );
 
