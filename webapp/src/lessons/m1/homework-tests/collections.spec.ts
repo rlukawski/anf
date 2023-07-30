@@ -1,4 +1,5 @@
-import { employees, shoppingList, shoppingDict, ShoppingItemWithId } from './mocks';
+import { access } from 'fs';
+import { employees, shoppingList, shoppingDict, ShoppingItemWithId, Employee } from './mocks';
 
 describe('Collection restructuring', () => {
   // in these exercises you'll be given two data structures:
@@ -14,6 +15,10 @@ describe('Collection restructuring', () => {
     // all elements of the list have `id` property set
 
     // define `array2dict` here
+
+    const array2dict = <T extends Employee | ShoppingItemWithId>(e: T[]) => {
+      return e.reduce((acc, curr) => ({...acc, [curr['id']]: curr}), {} as Record<T['id'],T>)
+    }
 
     let employeeDictionary = array2dict(employees);
 
