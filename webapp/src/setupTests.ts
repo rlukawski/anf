@@ -7,5 +7,7 @@ import '@testing-library/jest-dom';
 import 'jest-styled-components';
 
 import { toHaveNoViolations } from 'jest-axe';
+import { toMatchImageSnapshot } from 'jest-image-snapshot';
 
 expect.extend(toHaveNoViolations)
+expect.extend({ toMatchImageSnapshot });

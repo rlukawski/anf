@@ -42,6 +42,15 @@ const config: StorybookConfig = {
       "react-dom": path.resolve(__dirname, "../node_modules/react-dom"),
     });
 
+    // Ignore watching output files of e2e tests
+    config.watchOptions!.ignored = [
+      "**/node_modules",
+      path.resolve(__dirname, "../src/lessons/m10/backstop_data"),
+      path.resolve(__dirname, "../src/lessons/m10/cypress"),
+      path.resolve(__dirname, "../src/lessons/m10/puppeteer"),
+      path.resolve(__dirname, "../src/lessons/m10/storyshots"),
+    ];
+
     return config;
   },
 };
