@@ -1,6 +1,7 @@
+import { any } from 'prop-types';
 import { shoppingList, todos } from './mocks';
 
-describe.skip('Immutable ES6 operations', () => {
+describe('Immutable ES6 operations', () => {
 
   const john = {
     firstname: "John",
@@ -17,6 +18,23 @@ describe.skip('Immutable ES6 operations', () => {
     salary: 5000
   }
 
+  const mergeManyObjects = (...objs: any[]) => {
+    const result= {} as any;
+
+    objs.forEach((obj) => Object.keys(obj).forEach(item => result[item] = obj[item]));
+    return result;
+  }
+  const merge2objects = (a: any,b: any) => mergeManyObjects(a,b);
+
+  const stripKey = (key: string, obj: any) => {
+    const result = {...obj};
+    if( result[key]) {
+      delete result[key]
+    }
+    return result;
+  }
+
+  const stripId = (obj:any) => stripKey('id', obj ) 
   it('merge two objects', () => {
     // define `merge2objects` function here
     // for 2 given parameters, the function returns an new merged object
@@ -101,6 +119,13 @@ describe.skip('Immutable ES6 operations', () => {
   it('default object properties', () => {
     // define `newTodo` function here
     // it is supposed to fill the output object with `marked: false`, if marked is not passed in input
+
+    const newTodo = (obj: any) => {
+      if( !obj.marked) {
+        obj.marked = false;
+      }
+      return obj;
+    }
 
     expect(newTodo({
       "title": "Networked methodical function Shoes",
