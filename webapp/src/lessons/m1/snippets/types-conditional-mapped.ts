@@ -13,6 +13,7 @@ type Order = {
   price: number;
   deliveryDate: Date | undefined;
   shipment: string | null;
+  test?: number;
 };
 
 type OrderWithoutNullProperties = WithoutNullProperties<Order>

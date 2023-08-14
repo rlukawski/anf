@@ -1,3 +1,4 @@
+import React from 'react'
 import { mockJohn } from '../../../../mocks'
 import { ItemsList } from '../RenderProp'
 import { CompanyEmployee, Developer, Manager, ManagerView, DeveloperView, CompanyEmployeeView } from '../UnionProps';

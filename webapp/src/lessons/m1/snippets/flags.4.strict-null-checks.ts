@@ -9,4 +9,4 @@ type TrainingGroup = {
 }
 
 let training: TrainingGroup = { employees: [] }
-const dateStr = training.date.toISOString()
+const dateStr = training.date?.toISOString()

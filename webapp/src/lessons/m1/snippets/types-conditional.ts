@@ -32,7 +32,7 @@ type OnlyStringsSkills = OnlyStrings<Skills>
 type _OnlyStrings<T> = T[] extends string[] ? T : never
 type _OnlyStringsSkills = _OnlyStrings<Skills>
 
-
+// const t:OnlyStrings<string[]> = string[];
 
 // 🔥 infer
 
