@@ -4,7 +4,7 @@ export {}
 type GenericFn = <T>(a: T, b: T) => { a: T, b: T }
 type ParametrizedFn<T> = (a: T, b: T) => { a: T, b: T }
 
-declare let parametrizedFn: ParametrizedFn<string>
+declare let parametrizedFn: ParametrizedFn<string | number>
 declare let genericFn: GenericFn
 
 

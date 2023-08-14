@@ -43,9 +43,7 @@ appEngine(processWebDeveloper) // ❌
 // przecięcia funkcji
 
 // funkcja docelowa jest jednocześnie funkcją przetwarzającą i kierowców i webdeveloperów
-type ProcessEmployeeFunctionIntersection =
-  & typeof processWebDeveloper
-  & typeof processTaxiDriver
+type ProcessEmployeeFunctionIntersection = typeof processWebDeveloper & typeof processTaxiDriver
 declare let processEmployeeI: ProcessEmployeeFunctionIntersection
 // przecięcie funkcji działa jak function overload
 // czy przekażemy developera, czy taxi driver - jest git
