@@ -18,7 +18,7 @@ export async function asyncCall(){
   try {
     const response = await axios.get<object[]>('api.com/data')
     return response.data.length
-  } catch (e:unknown) {
-    handleAxiosError(e as AxiosError)
+  } catch (e) {
+    handleAxiosError(e)
   }
 }
