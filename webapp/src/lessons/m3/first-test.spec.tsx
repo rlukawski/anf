@@ -81,5 +81,6 @@ test.skip('ExamView', () => {
     fireEvent.click(finishBtn)
 
     expect(container).toHaveTextContent("Exam completed!")
+
   });
 });
