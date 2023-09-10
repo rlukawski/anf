@@ -8,6 +8,7 @@
 - zadanie pośrednie: "wyprostować" testy
   - przyjrzyj się, jak zmontowane są asercje. Jak się będzie z nimi pracowało? Co można poprawić?
   - w jaki sposób setupowane/przygotowywane są scenariusze testowe? Jakie będą konsekwencje, jeśli zechcemy coś zmienić w implementacji?
+DONE
 
 ### Testy Reaktowe
 

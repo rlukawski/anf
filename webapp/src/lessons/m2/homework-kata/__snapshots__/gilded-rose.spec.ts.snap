@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GIVEN Gilded Rose is initialized WHEN items are updated second time  to match second snapshot 1`] = `
+Array [
+  Item {
+    "name": "Magic",
+    "quality": 8,
+    "sellIn": 8,
+  },
+  Item {
+    "name": "Aged Brie",
+    "quality": 12,
+    "sellIn": 8,
+  },
+  Item {
+    "name": "Backstage passes to a TAFKAL80ETC concert",
+    "quality": 14,
+    "sellIn": 8,
+  },
+  Item {
+    "name": "Sulfuras, Hand of Ragnaros",
+    "quality": 10,
+    "sellIn": 10,
+  },
+]
+`;
+
+exports[`GIVEN Gilded Rose is initialized WHEN items are updated to match first snapshot 1`] = `
+Array [
+  Item {
+    "name": "Magic",
+    "quality": 9,
+    "sellIn": 9,
+  },
+  Item {
+    "name": "Aged Brie",
+    "quality": 11,
+    "sellIn": 9,
+  },
+  Item {
+    "name": "Backstage passes to a TAFKAL80ETC concert",
+    "quality": 12,
+    "sellIn": 9,
+  },
+  Item {
+    "name": "Sulfuras, Hand of Ragnaros",
+    "quality": 10,
+    "sellIn": 10,
+  },
+]
+`;

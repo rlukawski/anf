@@ -6,6 +6,11 @@
 - Ty dostajesz zadanie pokrycia go testami
 - **zaprojektuj scenariusze testowe**, weryfikujące komponent paginacji (nie pisz testów - wystarczy sama lista scenariuszy)
 - [przykładowy komponent paginacji](https://material-ui.com/components/pagination/)
+-> czy na lewo wyłączony gdy pozycja 0
+-> czy na prawo włączony gdy pozycja mniejsza od max.
+-> czy klilnięcie w prawo przełącza stronę (gdu pozycja > 0)
+-> czy kliknięcie w lewo przełącza stronę (gdy pozycja < max)
+
 
 ## Refactoring Kata
 
