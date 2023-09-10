@@ -11,7 +11,7 @@ import React from "react";
 // }
 
 export const ContactForm = ({ contact, onChange, onSubmit, onCancel }) => {
-  onChangeHandler = (e) => {
+  const onChangeHandler = (e) => {
     let target = e.target;
     let name = target.name;
     let value = target.type === "checkbox" ? target.checked : target.value;
@@ -22,7 +22,7 @@ export const ContactForm = ({ contact, onChange, onSubmit, onCancel }) => {
     });
   };
 
-  onSubmitHandler = (e) => {
+  const onSubmitHandler = (e) => {
     e.preventDefault();
     onSubmit(contact);
   };
