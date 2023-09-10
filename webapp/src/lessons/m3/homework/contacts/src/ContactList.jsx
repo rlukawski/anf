@@ -9,12 +9,11 @@ export const ContactList = ({selected, contacts, onSelect}) => {
         <button
           key={contact.id}
           onClick={(e) => onSelect(contact)}
-          className={`list-group-item ${this.props.selected && (this.props.selected.id === contact.id) ? 'active' : ''}`}
+          className={`list-group-item ${selected && (selected.id === contact.id) ? 'active' : ''}`}
         >
           {contact.name}
         </button>
       ))}
     </div>
   );
-
 }
