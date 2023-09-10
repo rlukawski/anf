@@ -1,14 +1,6 @@
 /* eslint-disable */
 import React from "react";
 
-// export class ContactForm extends React.Component {
-
-// static defaultProps = {
-//   contact: {
-//     name: '',
-//     details: ''
-//   }
-// }
 
 export const ContactForm = ({ contact, onChange, onSubmit, onCancel }) => {
   const onChangeHandler = (e) => {
