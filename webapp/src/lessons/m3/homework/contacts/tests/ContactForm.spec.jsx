@@ -5,9 +5,18 @@ import contacts from '../src/contacts.json';
 import { ContactForm } from '../src/ContactForm';
 
 describe('ContactForm Component', () => {
+  let mockedUseState;
+
+  beforeEach(() => {
+    mockedUseState = jest.fn();
+    jest.mock("react", () => ({
+      ...jest.requireActual("react"),
+      useState: mockedUseState
+    }));
+  });  
   it('should be stateless component (no setState, only props)', () => {
     const wrapper = shallow(<ContactForm contact={{}} />);
-    expect(wrapper.state()).toBeNull();
+    expect(mockedUseState).toBeCalledTimes(0);
   });
 
   it('should match snapshot', () => {
